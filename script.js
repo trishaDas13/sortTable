@@ -2,7 +2,7 @@ let btn = document.querySelectorAll('button');
 let table = document.querySelector('table');
 
 //todo ---------------- Ascending order ----------------
-btn[0].addEventListener('click', function(){
+function ascendingSort(){
     let sort = true;
     let sorted = false;
     let i = 0;
@@ -24,10 +24,10 @@ btn[0].addEventListener('click', function(){
             sort = true;
         }
     }
-});
+}
 
 //todo ---------------- Descending order ----------------
-btn[1].addEventListener("click", function(){
+function descendingSort(){
     let sort = true;
     let sorted = false;
     let i = 0;
@@ -49,10 +49,14 @@ btn[1].addEventListener("click", function(){
             sort = true;
         }
     }
-});
+}
 
 //todo ---------------- Refresh ----------------
 btn[2].addEventListener("click", function(){
     location.reload();
 });
+
+//todo ---------------- Calling function ----------------
+btn[0].addEventListener('click', ascendingSort);
+btn[1].addEventListener('click', descendingSort);
 
